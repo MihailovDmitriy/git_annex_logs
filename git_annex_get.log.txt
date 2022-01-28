@@ -1,0 +1,42 @@
+$ git annex get --debug sub-00/ses-post/anat/sub-00_ses-post_T1w.nii.gz
+[2022-01-27 23:26:15.206580911] (Utility.Process) process [1071262] read: git ["--git-dir=.git","--work-tree=.","--literal-pathspecs","-c","annex.debug=true","symbolic-ref","-q","HEAD"]
+[2022-01-27 23:26:15.209068345] (Utility.Process) process [1071262] done ExitSuccess
+[2022-01-27 23:26:15.209317685] (Utility.Process) process [1071263] read: git ["--git-dir=.git","--work-tree=.","--literal-pathspecs","-c","annex.debug=true","show-ref","refs/heads/master"]
+[2022-01-27 23:26:15.211817968] (Utility.Process) process [1071263] done ExitSuccess
+[2022-01-27 23:26:15.212123331] (Utility.Process) process [1071264] read: git ["--git-dir=.git","--work-tree=.","--literal-pathspecs","-c","annex.debug=true","ls-files","--stage","-z","--","sub-00/ses-post/anat/sub-00_ses-post_T1w.nii.gz"]
+[2022-01-27 23:26:15.212340521] (Utility.Process) process [1071265] chat: git ["--git-dir=.git","--work-tree=.","--literal-pathspecs","-c","annex.debug=true","cat-file","--batch-check=%(objectname) %(objecttype) %(objectsize)","--buffer"]
+[2022-01-27 23:26:15.212500345] (Utility.Process) process [1071266] chat: git ["--git-dir=.git","--work-tree=.","--literal-pathspecs","-c","annex.debug=true","cat-file","--batch=%(objectname) %(objecttype) %(objectsize)","--buffer"]
+[2022-01-27 23:26:15.212875709] (Utility.Process) process [1071267] chat: git ["--git-dir=.git","--work-tree=.","--literal-pathspecs","-c","annex.debug=true","cat-file","--batch=%(objectname) %(objecttype) %(objectsize)","--buffer"]
+get sub-00/ses-post/anat/sub-00_ses-post_T1w.nii.gz [2022-01-27 23:26:15.216934157] (Utility.Process) process [1071268] read: git ["--git-dir=.git","--work-tree=.","--literal-pathspecs","-c","annex.debug=true","show-ref","git-annex"]
+[2022-01-27 23:26:15.219489213] (Utility.Process) process [1071268] done ExitSuccess
+[2022-01-27 23:26:15.219682602] (Utility.Process) process [1071269] read: git ["--git-dir=.git","--work-tree=.","--literal-pathspecs","-c","annex.debug=true","show-ref","--hash","refs/heads/git-annex"]
+[2022-01-27 23:26:15.222108083] (Utility.Process) process [1071269] done ExitSuccess
+[2022-01-27 23:26:15.222438313] (Utility.Process) process [1071270] read: git ["--git-dir=.git","--work-tree=.","--literal-pathspecs","-c","annex.debug=true","log","refs/heads/git-annex..341803d02de463cbcced6262a0adb32b0963a153","--pretty=%H","-n1"]
+[2022-01-27 23:26:15.225082034] (Utility.Process) process [1071270] done ExitSuccess
+[2022-01-27 23:26:15.225272039] (Utility.Process) process [1071271] read: git ["--git-dir=.git","--work-tree=.","--literal-pathspecs","-c","annex.debug=true","log","refs/heads/git-annex..1c4bd7f9d4995b5a8b69131913debcc2cb8d5443","--pretty=%H","-n1"]
+[2022-01-27 23:26:15.227860443] (Utility.Process) process [1071271] done ExitSuccess
+[2022-01-27 23:26:15.228297577] (Utility.Process) process [1071272] chat: git ["--git-dir=.git","--work-tree=.","--literal-pathspecs","-c","annex.debug=true","cat-file","--batch"]
+(from origin...) 
+[2022-01-27 23:26:15.234402239] (Utility.Process) process [1071273] read: ssh ["-o","BatchMode=true","-S",".git/annex/ssh/dmitriy_mikhailov@10.10.10.205","-o","ControlMaster=auto","-o","ControlPersist=yes","-n","-T","dmitriy_mikhailov@10.10.10.205","true"]
+[2022-01-27 23:26:15.276783943] (Utility.Process) process [1071273] done ExitFailure 255
+[2022-01-27 23:26:15.27735512] (Utility.Process) process [1071274] read: ssh ["-S",".git/annex/ssh/dmitriy_mikhailov@10.10.10.205","-o","ControlMaster=auto","-o","ControlPersist=yes","-n","-T","dmitriy_mikhailov@10.10.10.205","true"]
+dmitriy_mikhailov@10.10.10.205's password: 
+[2022-01-27 23:26:21.769245319] (Utility.Process) process [1071274] done ExitSuccess
+[2022-01-27 23:26:21.770827896] (Utility.Process) process [1071278] chat: ssh ["dmitriy_mikhailov@10.10.10.205","-S",".git/annex/ssh/dmitriy_mikhailov@10.10.10.205","-o","ControlMaster=auto","-o","ControlPersist=yes","-T","git-annex-shell 'p2pstdio' '/home-local/dmitriy_mikhailov/fMRI_data/pirogov_aphazy_data' '--debug' '847f16f5-d7d4-4d17-8323-cf6d72c3102a' --uuid 261a954c-c87f-4f92-9df8-436cc412819f"]
+[2022-01-27 23:26:21.801630603] (Utility.Process) process [1071278] done ExitFailure 1
+
+  Transfer failed
+
+  Unable to access these remotes: origin
+
+  No other repository is known to contain the file.
+failed
+[2022-01-27 23:26:21.803952465] (Utility.Process) process [1071267] done ExitSuccess
+[2022-01-27 23:26:21.804020865] (Utility.Process) process [1071266] done ExitSuccess
+[2022-01-27 23:26:21.804062128] (Utility.Process) process [1071265] done ExitSuccess
+[2022-01-27 23:26:21.804091917] (Utility.Process) process [1071264] done ExitSuccess
+[2022-01-27 23:26:21.804547783] (Utility.Process) process [1071280] read: ssh ["-O","stop","-S","dmitriy_mikhailov@10.10.10.205","-o","ControlMaster=auto","-o","ControlPersist=yes","localhost"]
+[2022-01-27 23:26:21.809938614] (Utility.Process) process [1071280] done ExitSuccess
+[2022-01-27 23:26:21.810371062] (Utility.Process) process [1071272] done ExitSuccess
+get: 1 failed
+ 

@@ -1,0 +1,37 @@
+$ datalad --log-level debug get sub-00/ses-post/anat/sub-00_ses-post_T1w.nii.gz
+[DEBUG  ] Command line args 1st pass for DataLad 0.15.4. Parsed: Namespace() Unparsed: ['get', 'sub-00/ses-post/anat/sub-00_ses-post_T1w.nii.gz'] 
+[DEBUG  ] Building doc for <class 'datalad.local.subdatasets.Subdatasets'> 
+[DEBUG  ] Building doc for <class 'datalad.core.distributed.clone.Clone'> 
+[DEBUG  ] Building doc for <class 'datalad.distribution.get.Get'> 
+[DEBUG  ] Parsing known args among ['/home/mikhailov/miniconda3/envs/datalad/bin/datalad', '--log-level', 'debug', 'get', 'sub-00/ses-post/anat/sub-00_ses-post_T1w.nii.gz'] 
+[DEBUG  ] Run ['git', '--git-dir=', 'config', '-z', '-l', '--show-origin'] (cwd=None) 
+[DEBUG  ] Finished ['git', '--git-dir=', 'config', '-z', '-l', '--show-origin'] with status 0 
+[DEBUG  ] Determined class of decorated function: <class 'datalad.distribution.get.Get'> 
+[DEBUG  ] Resolved dataset to get content of <<['sub-00/ses-p++33 chars++gz']>>: /home/mikhailov/repo/fmri_data/pirogov_aphazy_data 
+[DEBUG  ] Run ['git', 'config', '-z', '-l', '--show-origin'] (cwd=/home/mikhailov/repo/fmri_data/pirogov_aphazy_data) 
+[DEBUG  ] Finished ['git', 'config', '-z', '-l', '--show-origin'] with status 0 
+[DEBUG  ] Run ['git', 'config', '-z', '-l', '--show-origin', '--file', '/home/mikhailov/repo/fmri_data/pirogov_aphazy_data/.datalad/config'] (cwd=/home/mikhailov/repo/fmri_data/pirogov_aphazy_data) 
+[DEBUG  ] Finished ['git', 'config', '-z', '-l', '--show-origin', '--file', '/home/mikhailov/repo/fmri_data/pirogov_aphazy_data/.datalad/config'] with status 0 
+[DEBUG  ] Determined class of decorated function: <class 'datalad.local.subdatasets.Subdatasets'> 
+[DEBUG  ] Resolved dataset to report on subdataset(s): /home/mikhailov/repo/fmri_data/pirogov_aphazy_data 
+[DEBUG  ] Query subdatasets of None 
+[DEBUG  ] Determine what files match the query to work with 
+[DEBUG  ] Run ['git', 'annex', 'version', '--raw'] (cwd=None) 
+[DEBUG  ] Finished ['git', 'annex', 'version', '--raw'] with status 0 
+[DEBUG  ] Run ['git', '-c', 'diff.ignoreSubmodules=none', '-c', 'annex.merge-annex-branches=false', 'annex', 'find', '--not', '--in', '.', '--json', '--json-error-messages', '-c', 'annex.dotfiles=true', '--', 'sub-00/ses-post/anat/sub-00_ses-post_T1w.nii.gz'] (cwd=/home/mikhailov/repo/fmri_data/pirogov_aphazy_data) 
+[DEBUG  ] Finished ['git', '-c', 'diff.ignoreSubmodules=none', '-c', 'annex.merge-annex-branches=false', 'annex', 'find', '--not', '--in', '.', '--json', '--json-error-messages', '-c', 'annex.dotfiles=true', '--', 'sub-00/ses-post/anat/sub-00_ses-post_T1w.nii.gz'] with status 0 
+[DEBUG  ] Run ['git', '-c', 'diff.ignoreSubmodules=none', 'annex', 'get', '-c', 'annex.retry=3', '--json', '--json-error-messages', '--json-progress', '-c', 'annex.dotfiles=true', '--', 'sub-00/ses-post/anat/sub-00_ses-post_T1w.nii.gz'] (cwd=/home/mikhailov/repo/fmri_data/pirogov_aphazy_data) 
+dmitriy_mikhailov@10.10.10.205's password:                                                              | 0.00/9.60M [00:00<?, ? Bytes/s]
+[DEBUG  ] Finished ['git', '-c', 'diff.ignoreSubmodules=none', 'annex', 'get', '-c', 'annex.retry=3', '--json', '--json-error-messages', '--json-progress', '-c', 'annex.dotfiles=true', '--', 'sub-00/ses-post/anat/sub-00_ses-post_T1w.nii.gz'] with status 1 
+[DEBUG  ] received JSON result from annex: {'command': 'get', 'wanted': [], 'note': 'from origin...\nUnable to access these remotes: origin', 'success': False, 'input': ['sub-00/ses-post/anat/sub-00_ses-post_T1w.nii.gz'], 'key': 'MD5E-s9600993--bb02ba4212e654054b53491b77e997ac.nii.gz', 'error-messages': ['  Transfer failed', '  Transfer failed', '  Transfer failed'], 'file': 'sub-00/ses-post/anat/sub-00_ses-post_T1w.nii.gz'} 
+get(error): sub-00/ses-post/anat/sub-00_ses-post_T1w.nii.gz (file) [Transfer failed
+Transfer failed
+Transfer failed]
+[DEBUG  ] could not perform all requested actions: IncompleteResultsError(Command did not complete successfully. 1 failed:
+[{'action': 'get',
+  'annexkey': 'MD5E-s9600993--bb02ba4212e654054b53491b77e997ac.nii.gz',
+  'error_message': 'Transfer failed\nTransfer failed\nTransfer failed',
+  'path': '/home/mikhailov/repo/fmri_data/pirogov_aphazy_data/sub-00/ses-post/anat/sub-00_ses-post_T1w.nii.gz',
+  'refds': '/home/mikhailov/repo/fmri_data/pirogov_aphazy_data',
+  'status': 'error',
+  'type': 'file'}])
