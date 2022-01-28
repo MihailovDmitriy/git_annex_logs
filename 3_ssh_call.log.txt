@@ -1,0 +1,29 @@
+ssh -v dmitriy_mikhailov@10.10.10.205 -S .git/annex/ssh/dmitriy_mikhailov@10.10.10.205 -o ControlMaster=auto -o ControlPersist=yes -T 'git-annex-shell p2pstdio /home-local/dmitriy_mikhailov/fMRI_data/pirogov_aphazy_data --debug 847f16f5-d7d4-4d17-8323-cf6d72c3102a --uuid 261a954c-c87f-4f92-9df8-436cc412819f'
+
+OpenSSH_8.2p1 Ubuntu-4ubuntu0.2, OpenSSL 1.1.1f  31 Mar 2020
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: /etc/ssh/ssh_config line 19: include /etc/ssh/ssh_config.d/*.conf matched no files
+debug1: /etc/ssh/ssh_config line 21: Applying options for *
+debug1: auto-mux: Trying existing master
+debug1: multiplexing control connection
+debug1: channel 1: new [mux-control]
+debug1: channel 2: new [client-session]
+debug1: Sending environment.
+debug1: Sending env LC_ADDRESS = ru_RU.UTF-8
+debug1: Sending env LC_NAME = ru_RU.UTF-8
+debug1: Sending env LC_MONETARY = ru_RU.UTF-8
+debug1: Sending env LC_PAPER = ru_RU.UTF-8
+debug1: Sending env LANG = en_US.UTF-8
+debug1: Sending env LC_IDENTIFICATION = ru_RU.UTF-8
+debug1: Sending env LC_TELEPHONE = ru_RU.UTF-8
+debug1: Sending env LC_MEASUREMENT = ru_RU.UTF-8
+debug1: Sending env LC_TIME = ru_RU.UTF-8
+debug1: Sending env LC_NUMERIC = ru_RU.UTF-8
+debug1: Sending command: git-annex-shell p2pstdio /home-local/dmitriy_mikhailov/fMRI_data/pirogov_aphazy_data --debug 847f16f5-d7d4-4d17-8323-cf6d72c3102a --uuid 261a954c-c87f-4f92-9df8-436cc412819f
+fatal: Run with no arguments or with -c cmd
+git-annex-shell: git-shell failed
+debug1: client_input_channel_req: channel 2 rtype exit-status reply 0
+debug1: client_input_channel_req: channel 2 rtype eow@openssh.com reply 0
+debug1: channel 2: free: client-session, nchannels 3
+debug1: channel 1: free: mux-control, nchannels 2
+
